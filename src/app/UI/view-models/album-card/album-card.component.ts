@@ -10,14 +10,13 @@ import { delay } from 'rxjs/operators';
 })
 export class AlbumCardComponent implements OnInit {
 
-  constructor(private _albumApiService : AlbumApiService) { }
+  constructor(private _getAlbumUseCase : GetAlbumUseCases) { }
   response$ ;
   datos;
   ngOnInit(): void {
-    this.response$ = this._albumApiService.getByID('4');
+    this.response$ = this._getAlbumUseCase.getAlbumById('4');
     this.response$.subscribe (
       (data) => {
- 
         this.datos = data;
       }
     );

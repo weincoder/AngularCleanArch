@@ -16,12 +16,12 @@ body {
   }
   
   .card-1 {
-    box-shadow: 0 1px 3px  rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 5px 10px  rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.25);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
   
   .card-1:hover {
-    box-shadow: 0 24px 58px rgba(110, 110, 110, 0.25), 0 10px 10px rgba(110, 110, 110, 0.25);
+    box-shadow: 0 48px 58px rgba(110, 110, 110, 0.25), 0 10px 10px rgba(110, 110, 110, 0.25);
   }
   h2, h1{
       margin-bottom: 2px;
