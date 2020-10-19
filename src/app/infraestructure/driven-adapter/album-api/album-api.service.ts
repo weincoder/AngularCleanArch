@@ -4,6 +4,7 @@ import { Album } from 'src/app/domain/models/Album/album';
 import { flatMap, map } from 'rxjs/operators';
 import { AlbumUseCases } from 'src/app/domain/models/Album/gateway/album-use-cases';
 import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class AlbumApiService implements AlbumUseCases {
   
   constructor(private http: HttpClient) {}
   getByID(id: String): Observable<Album> {
-    return this.http.get<Album>(this._url+id);
+    return this.http.get<Album>(this._url+id).pipe(delay(2000));
   }
   getAll(): Observable<Album[]> {
     return this.http.get<Array<Album>>(this._urlArray);

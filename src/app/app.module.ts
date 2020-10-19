@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumCardComponent } from './UI/models/album-card/album-card.component';
+import { CircularProgressIndicatorComponent } from './UI/common/circular-progress-indicator/circular-progress-indicator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumCardComponent
+    AlbumCardComponent,
+    CircularProgressIndicatorComponent
   ],
   imports: [
     BrowserModule,
