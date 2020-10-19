@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "clean-arch-angular"
+    }
+  },
+  "defaultProject": "clean-arch-angular",
+  "cli": {
+    "analytics": "ccba0e2d-4373-4efd-972d-041c75ca8578"
+  }
 }
