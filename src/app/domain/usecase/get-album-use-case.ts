@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Inject, inject, Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { Album } from '../models/Album/album';
 import {AlbumGateway} from '../models/Album/gateway/album-use-cases';
@@ -8,7 +8,7 @@ import {AlbumGateway} from '../models/Album/gateway/album-use-cases';
 })
 
 export class GetAlbumUseCases {
-  constructor(private albumGateWay: AlbumGateway) {}  
+  constructor(@Inject('AlbumGateway') private albumGateWay: AlbumGateway) {}  
 
   getAlbumById (id: String) : Observable <Album> {
     //TODO: En este sitio podríamos manejar las configuraciones 
