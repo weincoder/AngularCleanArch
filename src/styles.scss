@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css?family=Fredoka+One|Comfortaa:300';
+$font: "Menlo", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", "Consolas", monospace;
+* {
+    font-family: $font;
+}
