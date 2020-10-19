@@ -4,3 +4,13 @@ $font: "Menlo", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", "Conso
 * {
     font-family: $font;
 }
+$body: #190d23;
+$none: rgba(#000,0);
+$b1: #010000;
+
+
+
+body {
+    background: $body;
+    text-align: center;
+}
