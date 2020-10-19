@@ -9,7 +9,16 @@ $none: rgba(#000,0);
 $b1: #010000;
 
 
-
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 50px;
+}
+h3 {
+    font-size: 42px;
+}
 body {
     background: $body;
     text-align: center;
