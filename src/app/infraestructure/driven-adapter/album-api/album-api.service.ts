@@ -5,15 +5,17 @@ import { flatMap, map } from 'rxjs/operators';
 import { AlbumGateway } from 'src/app/domain/models/Album/gateway/album-use-cases';
 import { Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
-export class AlbumApiService implements AlbumGateway {
+export  class AlbumApiService extends AlbumGateway {
 
   private _url = 'https://jsonplaceholder.typicode.com/albums/';
   private _urlArray = 'https://jsonplaceholder.typicode.com/albums/';
   
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    super();}
   getByID(id: String): Observable<Album> {
     return this.http.get<Album>(this._url+id).pipe(delay(2000));
   }

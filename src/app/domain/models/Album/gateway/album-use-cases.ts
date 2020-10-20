@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
 import { Album } from '../album';
 
-export interface AlbumGateway {
-    getByID(id: String): Observable<Album>;
-    getAll(): Observable<Array<Album>>;
-    saveNew (_alb :Album) : Observable<void>;
-}
+export abstract class AlbumGateway {
+    abstract getByID(id: String): Observable<Album>;
+    abstract getAll(): Observable<Array<Album>>;
+    abstract saveNew (_alb :Album) : Observable<void>;
+} 

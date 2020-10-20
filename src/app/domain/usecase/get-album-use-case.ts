@@ -1,22 +1,21 @@
-import { HttpClient } from '@angular/common/http';
 import { Inject, inject, Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { Album } from '../models/Album/album';
 import {AlbumGateway} from '../models/Album/gateway/album-use-cases';
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class GetAlbumUseCases {
-  constructor(@Inject('AlbumGateway') private albumGateWay: AlbumGateway) {}  
-
+  constructor( private _albumGateWay: AlbumGateway) {}  
   getAlbumById (id: String) : Observable <Album> {
     //TODO: En este sitio podríamos manejar las configuraciones 
     //en cache
-    return this.albumGateWay.getByID(id);
+    return this._albumGateWay.getByID(id);
   }
   getAllAlbum () : Observable <Array<Album>> {
-    return this.albumGateWay.getAll();
+    return this._albumGateWay.getAll();
   }
 
 }
