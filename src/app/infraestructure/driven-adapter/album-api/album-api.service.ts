@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Album } from 'src/app/domain/models/Album/album';
-import { flatMap, map } from 'rxjs/operators';
 import { AlbumGateway } from 'src/app/domain/models/Album/gateway/album-use-cases';
 import { Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
