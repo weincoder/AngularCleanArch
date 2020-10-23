@@ -1,7 +1,7 @@
 import { Inject, inject, Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { Album } from '../models/Album/album';
-import {AlbumGateway} from '../models/Album/gateway/album-use-cases';
+import {AlbumGateway} from '../models/Album/gateway/album-gateway';
 
 @Injectable({
   providedIn: 'root'

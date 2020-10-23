@@ -13,7 +13,7 @@ export class AlbumCardComponent implements OnInit {
   response$ ;
   datos;
   ngOnInit(): void {
-    this.response$ = this._getAlbumUseCase.getAlbumById('4');
+    this.response$ = this._getAlbumUseCase.getAlbumById('12');
     this.response$.subscribe (
       (data) => {
         this.datos = data;
