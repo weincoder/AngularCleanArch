@@ -7,6 +7,7 @@ import { AlbumCardComponent } from './UI/view-models/album-card/album-card.compo
 import { CircularProgressIndicatorComponent } from './UI/common/circular-progress-indicator/circular-progress-indicator.component';
 import { AlbumGateway } from './domain/models/Album/gateway/album-gateway';
 import { AlbumApiService } from './infraestructure/driven-adapter/album-api/album-api.service';
+import { AlbumApiServiceWithoutDelay } from './infraestructure/driven-adapter/album-api/album-api-withou-delay.service';
 
 @NgModule({
   declarations: [
